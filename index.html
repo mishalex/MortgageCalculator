@@ -8,69 +8,28 @@
 		<link href="style.css" type="text/css" rel="stylesheet"></link>
 	</head>
 	<body>
-		<form class="calculator"> <!--todo определиться со стилем именования классов, везде все разное!-->
-		<div class="TableCalc">
-			<table>
-				<div>
-				<tr>
-					<td>
-						<input  class="FieldEnter" type="text">
-					</td>
-				</tr>
-				<tr>
-					<td class="buttons">
-						<input type="button" value="<">
-						<input type="button" value="CE">
-						<input type="button" value="C">
-						<input type="button" value="+-">
-						<input type="button" value="^">
-						<br>
-						<input type="button" value="7">
-						<input type="button" value="8">
-						<input type="button" value="9">
-						<input type="button" value="/">
-						<input type="button" name="percent" value="%">
-						<br>
-						<input type="button" value="4">
-						<input type="button" value="5">
-						<input type="button" value="6">
-						<input type="button" value="*">
-						<input type="button" value="1/x">
-						<br>
-						<input type="button" value="1">
-						<input type="button" value="2">
-						<input type="button" value="3">
-						<input type="button" value="-">
-						<input class="equally" type="button" value="=">
-						<br>
-						<input class="zero" type="button"value="0">
-						<input type="button" value=",">
-						<input type="button" value="+">
-					</td>
-				</tr>
-			</table>
-		</div>
-		<div class="payment">
-			<p>Выберите значение для вычесления</p> <!--todo исправить грамматические ошибки-->
-			<select>
-				<option value="ежемесячный платеж">ежемесячный платеж</option>
-				<option value="первоначальный платеж">первоначальный платеж</option>
-				<option value="срок(лет)">срок(лет)</option>
-				<option value="цена покупки">цена покупки</option>
-			</select>
-			<p>Цена покупки
-				<input class="FieldEnter" type="text"/>
-			</p>
-			<p>Первоначальный платеж
-				<input class="FieldEnter" type="text"/>
-			</p>
-			<p>Срок(лет) <!--todo перед скобкой поставить пробел, или лучше так сделать "Срок, лет"-->
-				<input class="FieldEnter" type="text"/>
-			</p>
-			<p>Процентная ставка (%) <!--todo лучше так сделать "Процентная ставка, %"-->
-				<input class="FieldEnter" type="text"/>
-			</p>
-
-</form>
+		<form class="Calculator"> 
+			<div class="payment">
+				<p>Выберите значение для вычисления</p> 
+				<select>
+					<option value="ежемесячный платеж">ежемесячный платеж</option>
+					<option value="первоначальный платеж">первоначальный платеж</option>
+					<option value="срок(лет)">срок(лет)</option>
+					<option value="цена покупки">цена покупки</option>
+				</select>
+				<p>Цена покупки
+					<input class="FieldEnter" type="text"/>
+				</p>
+				<p>Первоначальный платеж
+					<input class="FieldEnter" type="text"/>
+				</p>
+				<p>Срок, лет
+					<input class="FieldEnter" type="text"/>
+				</p>
+				<p>Процентная ставка, %
+					<input class="FieldEnter" type="text"/>
+				</p>
+			</div>
+		</form>
 	</body>
 </html>

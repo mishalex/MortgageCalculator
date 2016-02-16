@@ -2,52 +2,15 @@ html, body {
 	margin: 0;
 }
 
-/*table {
-	border: 1px solid black;
-}*/
-.calculator {
-	
-}
 input {
 	padding: 10px;
 	width: 50px;
 	height: 50px;
 	margin: 5px;
 }
-/*td {
-	border: 1px solid black;
-}
-*/
-.zero {
-	width: 115px;
-}
-.equally {
-	height: 100px;
-	float: right;
-	margin-right: 20px;
-	height: 110px;
-}
-.text {
-	width: 300px;
-}
-div {
-	/*border: 1px solid black;*/
-	/*margin-left: 10px;*/
-}
-
-.TableCalc {
-	margin-top: 10px;
-	float: left;
-	width: 400px;
-	/*border: 1px solid black;*/
-	margin-left: 50px;
-	margin-right: 50px;
-}
 .payment {
-	text-align:left;
-	float: left;
+	padding-left: 50px;
 	width: 300px;
-	/*border: 1px solid black;*/
 }
 .FieldEnter {
 	width: 280px;
