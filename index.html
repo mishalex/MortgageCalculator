@@ -10,25 +10,40 @@
 	<body>
 		<form class="Calculator"> 
 			<div class="payment">
-				<p>Выберите значение для вычисления</p> 
-				<select>
-					<option value="ежемесячный платеж">ежемесячный платеж</option>
-					<option value="первоначальный платеж">первоначальный платеж</option>
-					<option value="срок(лет)">срок(лет)</option>
-					<option value="цена покупки">цена покупки</option>
-				</select>
-				<p>Цена покупки
-					<input class="FieldEnter" type="text"/>
-				</p>
-				<p>Первоначальный платеж
-					<input class="FieldEnter" type="text"/>
-				</p>
-				<p>Срок, лет
-					<input class="FieldEnter" type="text"/>
-				</p>
-				<p>Процентная ставка, %
-					<input class="FieldEnter" type="text"/>
-				</p>
+				<table>
+					<tr>
+						<td colspan="2" class="caption">Выберите значение для вычисления</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td><select>
+						<option value="ежемесячный платеж">ежемесячный платеж</option>
+						<option value="первоначальный платеж">первоначальный платеж</option>
+						<option value="срок(лет)">срок(лет)</option>
+						<option value="цена покупки">цена покупки</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td>Цена покупки</td>
+						<td><input id="price" type="text"/><td>
+					</tr>
+					<tr>
+						<td>Первоначальный платеж</td>
+						<td><input id="firstPrice" type="text"/></td>
+					</tr>
+					<tr>
+						<td>Срок, лет</td>
+						<td><input id="year" type="text"/></td>
+					</tr>
+					<tr>
+						<td>Процентная ставка, %</td>
+						<td><input id="Percent" type="text"/></td>
+					</tr>
+					<tr>
+						<td><input type="submit" value="Вычислить"/></td>
+						<td><input type="text"/></td>
+					</tr>
+				</table>
 			</div>
 		</form>
 	</body>
