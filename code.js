@@ -37,9 +37,10 @@ window.onload = function () {
 	// monthlyPayment = ((percent / 12 / 100) * (Math.pow((1 + percent / 12 / 100), months)) / (Math.pow((1 + percent / 12 / 100), months) - 1)) * sum; 
 	// console.log(monthlyPayment);
 	// var button = document.getElementById ("button");
+	console.log('window loaded');
 	button.onclick= function() {
 	// alert("click");
-	var result = document.getElementById ("result");
+	var result = document.getElementById ("result"); //todo отформатировать, не хватает табуляции
 	result.value = 100000;
 	}
 }
