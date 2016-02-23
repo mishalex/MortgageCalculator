@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Mortgage Calculator</title>
-		<script src="code.js"s>
+		<script src="app.js"s>
 		</script>
 		<link href="style.css" type="text/css" rel="stylesheet"></link>
 	</head>
@@ -20,35 +20,35 @@
 						</td>
 						<td>
 							<select id="newselect">
-								<option value="ежемесячный платеж">ежемесячный платеж</option>
-								<option value="первоначальный платеж">первоначальный платеж</option>
+								<option value="сумма кредита">Сумма кредита</option>
 								<option value="срок(лет)">срок(лет)</option>
-								<option value="цена покупки">цена покупки</option>
+								<option value="процент">процент</option>
+								<option value="месячный платеж">месячный платеж</option>
 							</select>
 						</td>
 					</tr>
-					<tr>
-						<td>Цена покупки</td>
+					<tr id="opt1">
+						<td>Сумма кредита</td>
 						<td>
 							<input id="price" type="text"/>
 						<td>
 					</tr>
-<!-- 					<tr>
-						<td>Первоначальный платеж</td>
-						<td>
-							<input id="firstPrice" type="text"/>
-						</td>
-					</tr> -->
-					<tr>
+					<tr id="opt2">
 						<td>Срок, месяцев</td>
 						<td>
 							<input id="months" type="text"/>
 						</td>
 					</tr>
-					<tr>
+					<tr id="opt3">
 						<td>Процентная ставка, %</td>
 						<td>
 							<input id="percent" type="text"/>
+						</td>
+					</tr>
+					<tr id="opt4">
+						<td>Ежемесячный платеж</td>
+						<td>
+							<input id="monthlyPayment" type="text"/>
 						</td>
 					</tr>
 					<tr>
