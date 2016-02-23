@@ -1,8 +1,10 @@
-window.onload = function() {	
+window.onload = function() {
 	var button = document.getElementById('calculateButton');
 	button.onclick = onCalculateButtonClick; 
 	var option = document.getElementById('newselect');
 	option.onchange = onNoneOption;
+	var buttonTable = document.getElementById('buttonTable');
+	buttonTable.onclick = onButtonTableClick; 
 }
 
 var onNoneOption = function() {
@@ -78,3 +80,52 @@ var onCalculateButtonClick = function() {
 	}
 	result.value = resultValue;
 }
+
+var onButtonTableClick = function() {
+ 	var months = document.getElementById("months").value;
+ 	var payment = document.getElementById("result").value;
+ 	var table = configureTable();
+ 	var date = new Date();
+ 	var year = date.getFullYear();
+ 	var month = date.getMonth();
+  	for (var count = 0; count < months; count++) {
+		var firstDate = new Date(year, month + count + 1, 1);
+		createRow(table, count, firstDate, payment);		
+	}	
+	document.body.appendChild(table);
+}
+
+var createRow = function(table, i, date, payment) {
+	var row = table.insertRow(-1),
+		cell = row.insertCell(-1),
+		cellDate = row.insertCell(-1),
+		cellPayment = row.insertCell(-1),
+		optionsDate  = {
+			year: 'numeric',
+			month: 'numeric',
+			day: 'numeric'
+		};
+	cellDate.width = "45%";
+	cellPayment.width = "45%";
+	cell.innerHTML = i + 1;
+	cellDate.innerHTML = date.toLocaleString("ru", optionsDate);
+	cellPayment.innerHTML = (Number(payment)).toFixed(2);
+}
+
+var configureTable = function() {
+	var table = document.createElement('table');
+ 	table.id = 't1';
+	table.width = 500;
+	table.border = 1;
+	table.createTHead();
+	var header = table.createTHead();
+	var row = header.insertRow(0);
+    var cellNumber = row.insertCell(-1);
+    var cellDate = row.insertCell(-1);
+    var cellPayment = row.insertCell(-1);
+    cellNumber.innerHTML = "<b>№</b>";
+    cellDate.innerHTML = "<b>Дата</b>";
+    cellPayment.innerHTML = "<b>Платеж</b>";
+    return table;
+} 
+

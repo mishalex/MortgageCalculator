@@ -8,4 +8,16 @@ table {
 .caption {
 	text-align: center;
 }
-#opt1 {display: none;}
+#opt1 {
+	display: none;
+}
+input {
+	width: 150px;
+	height: 25px;
+}
+select {
+	width: 155px;
+}
+td {
+	text-align: center;
+}
