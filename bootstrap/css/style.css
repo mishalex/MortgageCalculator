@@ -4,6 +4,8 @@ html, body {
 table {
 	margin-left: 10px;
 	margin-top: 10px;
+	width: 400px !important;
+	text-align: left;
 }
 .caption {
 	text-align: center;
@@ -11,13 +13,14 @@ table {
 #opt1 {
 	display: none;
 }
-input {
+/*input {
 	width: 150px;
 	height: 25px;
-}
-select {
-	width: 155px;
-}
+}*/
+/*select {
+	width: 155px !important;
+}*/
 td {
 	text-align: center;
 }
+

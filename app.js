@@ -4,7 +4,7 @@ window.onload = function() {
 	var option = document.getElementById('newselect');
 	option.onchange = onNoneOption;
 	var buttonTable = document.getElementById('buttonTable');
-	buttonTable.onclick = onButtonTableClick; 
+	buttonTable.onclick = onButtonTableClick;
 }
 
 var onNoneOption = function() {
@@ -66,17 +66,42 @@ var onCalculateButtonClick = function() {
 		result = document.getElementById('result'),
 		resultValue,
 		select = document.getElementById("newselect").selectedIndex;
+
 	if (select == 0) {
-		resultValue = calculateSum(payment.value, percent.value, months.value);
+		var priceCorrect = validatePriceValues();
+		if (priceCorrect) {
+			resultValue = calculateSum(payment.value, percent.value, months.value);
+		} 
+		else {
+			return;
+		}		
 	}
 	if (select == 1) {
-		resultValue = calculateMonths();
+		var monthsCorrect = validateMonthsValues() 
+		if (monthsCorrect) {
+			resultValue = calculateMonths();
+		}
+		else {
+			return;
+		}		
 	}
 	if (select == 2) {
-		resultValue = calculatePercent();
+		var percentCorrect = validatePercentValues();
+		if  (percentCorrect) {
+			resultValue = calculatePercent();
+		}
+		else {
+			return;
+		}		
 	}
 	if (select == 3) {
-		resultValue = calculateMonthlyPayment(price.value, months.value, percent.value);
+		var monthlyPaymentCorrect = validateMonthlyPaymentValues();
+		if (monthlyPaymentCorrect) {
+			resultValue = calculateMonthlyPayment(price.value, months.value, percent.value);
+		}
+		else {
+			return;
+		}
 	}
 	result.value = resultValue;
 }
@@ -129,3 +154,78 @@ var configureTable = function() {
     return table;
 } 
 
+var validateMonthlyPaymentValues = function() {
+	var price = document.getElementById("price"),
+		months = document.getElementById("months"),
+		percent = document.getElementById("percent");
+	if (percent.value > 100 || percent.value < 0) {
+		console.log("Введенное значение для процентов указано не верно. Значение процентов должно быть в пределах от 0 до 100");
+		return false;
+	}
+	if (months.value > 360 || months.value < 6) {
+		console.log("Введенное значение для срока кредита указано не верно. Срок кредита в пределах от 6 до 360 месяцев");
+		return false;
+	}
+	if (price.value > 100000000 || price.value < 10000) {
+		console.log("Введенное значение для цены покупки указано не верно. Цена покупки должна быть в пределах от 100000 до 10000000");
+		return false;
+	}
+	return true;
+}
+
+var validatePriceValues = function() {
+	var months = document.getElementById("months"),
+		percent = document.getElementById("percent"),
+		payment = document.getElementById("monthlyPayment");
+	if (percent.value > 100 || percent.value < 0) {
+	console.log("Введенное значение для процентов указано не верно. Значение процентов должно быть в пределах от 0 до 100");
+		return false;
+	}
+	if (months.value > 360 || months.value < 6) {
+		console.log("Введенное значение для срока кредита указано не верно. Срок кредита в пределах от 6 до 360 месяцев");
+		return false;
+	}
+	if (monthlyPayment.value < 1000) {
+		console.log("Введенное значение для месячного платежа указано не верно. Месячный платеж должен быть больше 1000");
+		return false;
+	}
+	return true;
+}
+
+var validateMonthsValues = function() {
+	var price = document.getElementById("price"),
+		percent = document.getElementById("percent"),
+		payment = document.getElementById("monthlyPayment");
+	if (percent.value > 100 || percent.value < 0) {
+	console.log("Введенное значение для процентов указано не верно. Значение процентов должно быть в пределах от 0 до 100");
+		return false;
+	}
+	if (price.value > 100000000 || price.value < 10000) {
+		console.log("Введенное значение для цены покупки указано не верно. Цена покупки должна быть в пределах от 100000 до 10000000");
+		return false;
+	}
+	if (monthlyPayment.value < 1000) {
+		console.log("Введенное значение для месячного платежа указано не верно. Месячный платеж должен быть больше 1000");
+		return false;
+	}
+	return true;
+}
+
+var validatePercentValues = function() {
+	var price = document.getElementById("price"),
+		months = document.getElementById("months"),
+		payment = document.getElementById("monthlyPayment");
+	if (months.value > 360 || months.value < 6) {
+		console.log("Введенное значение для срока кредита указано не верно. Срок кредита в пределах от 6 до 360 месяцев");
+		return false;
+	}
+	if (price.value > 100000000 || price.value < 10000) {
+		console.log("Введенное значение для цены покупки указано не верно. Цена покупки должна быть в пределах от 100000 до 10000000");
+		return false;
+	}
+	if (monthlyPayment.value < 1000) {
+		console.log("Введенное значение для месячного платежа указано не верно. Месячный платеж должен быть больше 1000");
+		return false;
+	}
+	return true;
+}
