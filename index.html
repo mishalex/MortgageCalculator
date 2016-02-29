@@ -3,45 +3,71 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Mortgage Calculator</title>
-		<script src="code.js"s>
+		<script src="app.js"s>
 		</script>
+<<<<<<< HEAD
 		<!-- <link href="style.css" type="text/css" rel="stylesheet"></link> -->
+=======
+		<link href="bootstrap/css/style.css" type="text/css" rel="stylesheet"></link>
+		<link href="bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"></link>
+>>>>>>> 1e0b6806d7f72b6a8097f4dc870eb58fd6630ce7
 	</head>
 	<body>
-		<form class="Calculator"> 
-			<div class="payment">
-				<table>
+		<form> 
+			<div>
+				<table class="table table-striped">
 					<tr>
 						<td colspan="2" class="caption">Выберите значение для вычисления</td>
 					</tr>
 					<tr>
-						<td></td>
-						<td><select>
-						<option value="ежемесячный платеж">ежемесячный платеж</option>
-						<option value="первоначальный платеж">первоначальный платеж</option>
-						<option value="срок(лет)">срок(лет)</option>
-						<option value="цена покупки">цена покупки</option>
-						</select></td>
+						<td>
+							
+						</td>
+						<td>
+							<select id="newselect" class="form-control">
+								<option value="сумма кредита">сумма кредита</option>
+								<option value="срок(лет)">срок(лет)</option>
+								<option value="процент">процент</option>
+								<option value="месячный платеж">месячный платеж</option>
+							</select>
+						</td>
 					</tr>
-					<tr>
-						<td>Цена покупки</td>
-						<td><input id="price" type="text" value="1500000"/><td>
+					<tr id="opt1">
+						<td>Сумма кредита</td>
+						<td>
+							<input id="price" type="text"/>
+						<td>
 					</tr>
-					<tr>
-						<td>Первоначальный платеж</td>
-						<td><input id="firstPrice" type="text" value="500000"/></td>
+					<tr id="opt2">
+						<td>Срок, месяцев</td>
+						<td>
+							<input id="months" type="text"/>
+						</td>
 					</tr>
-					<tr>
-						<td>Срок, лет</td>
-						<td><input id="year" type="text" value="240"/></td>
-					</tr>
-					<tr>
+					<tr id="opt3">
 						<td>Процентная ставка, %</td>
-						<td><input id="Percent" type="text" value="13"/></td>
+						<td>
+							<input id="percent" type="text"/>
+						</td>
+					</tr>
+					<tr id="opt4">
+						<td>Ежемесячный платеж</td>
+						<td>
+							<input id="monthlyPayment" type="text"/>
+						</td>
 					</tr>
 					<tr>
-						<td><input type="submit" id="button" value="Вычислить"/></td>
-						<td><input type="text" id="result" value=""/></td>
+						<td>
+							<input type="button" id="calculateButton" class="btn btn-primary" value="Вычислить"/>
+						</td>
+						<td>
+							<input type="text" name="result" id="result"/>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="button" value="График платежей" id="buttonTable" class="btn btn-primary"></input>
+						</td>
 					</tr>
 				</table>
 			</div>

@@ -1,0 +1,26 @@
+html, body {
+	margin: 0;
+}
+table {
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 400px !important;
+	text-align: left;
+}
+.caption {
+	text-align: center;
+}
+#opt1 {
+	display: none;
+}
+/*input {
+	width: 150px;
+	height: 25px;
+}*/
+/*select {
+	width: 155px !important;
+}*/
+td {
+	text-align: center;
+}
+
