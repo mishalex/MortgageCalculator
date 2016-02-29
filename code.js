@@ -38,6 +38,7 @@ window.onload = function () {
 	// console.log(monthlyPayment);
 	// var button = document.getElementById ("button");
 	console.log('window loaded');
+	var button = document.getElementById ("button");
 	button.onclick= function() {
 	// alert("click");
 	var result = document.getElementById ("result"); //todo отформатировать, не хватает табуляции
