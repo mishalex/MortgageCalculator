@@ -4,23 +4,21 @@ html, body {
 table {
 	margin-left: 10px;
 	margin-top: 10px;
-	width: 400px !important;
+	width: 500px !important;
 	text-align: left;
 }
 .caption {
 	text-align: center;
 }
-#opt1 {
+#optSum {
 	display: none;
 }
-/*input {
-	width: 150px;
-	height: 25px;
-}*/
-/*select {
-	width: 155px !important;
-}*/
 td {
 	text-align: center;
 }
+#false {
+	color: red;
+	display: none;
+}
+
 
