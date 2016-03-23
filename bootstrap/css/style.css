@@ -1,11 +1,29 @@
 html, body {
 	margin: 0;
+	/*background-color: rgb(255,11,44);*/
 }
-table {
-	margin-left: 10px;
-	margin-top: 10px;
-	width: 500px !important;
+
+header {
+	position:fixed;
+	left: 0;
+	top: 0;
+	font-size: 20px;
+	color: white;
+	float: left;
+	background-color: gray;
+	width: 100%;
+	height: 30px;
+	vertical-align: middle;
+}
+div {
+	/*border: 1px solid black;*/
+	padding-top: 20px;
+	vertical-align: middle;
+	padding-left: 35%;
+	padding-right: 35%;
 	text-align: left;
+	width: 400px;
+	height: 40px;
 }
 .caption {
 	text-align: center;
@@ -13,12 +31,41 @@ table {
 #optSum {
 	display: none;
 }
-td {
-	text-align: center;
+.forFloat {
+	margin-top: 7px;
+	margin-bottom: 2px;
+	float: left;
+	padding: 10px;
+	width: 180px;
 }
-#false {
-	color: red;
+#calculateButton {
+	width: 143px;
+}
+.form-control {
+	height: 30px !important;
+	width: 165px !important;
+}
+p {
+	vertical-align: middle;
+}
+footer {
+	position: fixed;
+	left: 0; 
+	bottom: 0;
+	background-color: gray;
+	width: 100%;
+	height: 30px;
+	color: white;
+}
+h5 {
+	padding-left: 50px;
+}
+
+.error {
 	display: none;
+	color: red;
+	font-size: 10px;
+	height: 10px;
+	text-align: right;
+	width: 300px;
 }
-
-

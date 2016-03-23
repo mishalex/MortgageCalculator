@@ -9,68 +9,64 @@
 		<link href="bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"></link>
 	</head>
 	<body>
+		<header>
+			<h5>Ипотечный калькулятор</h5>
+		</header>
 		<form> 
-			<div>
-				<table class="table table-striped">
-					<tr>
-						<td colspan="2" class="caption">Выберите значение для вычисления</td>
-					</tr>
-					<tr>
-						<td>
-							
-						</td>
-						<td>
-							<select id="newselect" class="form-control">
-								<option value="сумма кредита">сумма кредита</option>
-								<option value="срок(лет)">срок(лет)</option>
-								<option value="процент">процент</option>
-								<option value="месячный платеж">месячный платеж</option>
-							</select>
-						</td>
-					</tr>
-					<tr id="optSum">
-						<td>Сумма кредита</td>
-						<td>
-							<input id="price" type="text"/>
-						</td>
-					</tr>
-					<tr id="false">
-						<td></td>
-						<td>неверное сообщение</td>
-					</tr>
-					<tr id="optMonths">
-						<td>Срок, месяцев</td>
-						<td>
-							<input id="months" type="text"/>
-						</td>
-					</tr>
-					<tr id="optPercent">
-						<td>Процентная ставка, %</td>
-						<td>
-							<input id="percent" type="text"/>
-						</td>
-					</tr>
-					<tr id="optPayment">
-						<td>Ежемесячный платеж</td>
-						<td>
-							<input id="monthlyPayment" type="text"/>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="button" id="calculateButton" class="btn btn-primary" value="Вычислить"/>
-						</td>
-						<td>
-							<input type="text" name="result" id="result"/>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="button" value="График платежей" id="buttonTable" class="btn btn-primary"></input>
-						</td>
-					</tr>
-				</table>
+			<div class="calculator">
+				<div>
+					<div class="forFloat">Выберите тип расчета</div>
+					<div class="forFloat">
+						<select id="newselect" class="form-control">
+							<option value="сумма кредита">сумма кредита</option>
+							<option value="срок(лет)">срок(лет)</option>
+							<option value="процент">процент</option>
+							<option value="месячный платеж">месячный платеж</option>
+						</select>
+					</div>
+				</div>
+				<div id="optSum">
+					<div class="forFloat">
+						<p>Сумма кредита</p>
+					</div> 
+					<div class="forFloat"><input id="price" class="form-control" type="text" value = ""/></div>
+				</div>
+				<div class="error" id="errorSum">
+					<p>Сумма кредита введена некоректно</p>
+				</div>
+				<div id="optMonths">
+					<div class="forFloat">Срок, месяцев</div>
+					<div class="forFloat"><input id="months" class="form-control" type="text" value = ""/></div>
+				</div>
+				<div class="error" id="errorMonths">
+					<p>Срок кредита указан некоректно</p>
+				</div>
+				<div id="optPercent">
+					<div class="forFloat">Процентная ставка, %</div> 
+					<div class="forFloat"><input id="percent" class="form-control" type="text" value = ""/></div>
+				</div>
+				<div class="error" id="errorPercent">
+					<p>Процент указан некоректно</p>
+				</div>
+				<div id="optPayment">
+					<div class="forFloat">Ежемесячный платеж</div>
+					<div class="forFloat"><input id="monthlyPayment" class="form-control" type="text" value = ""/></div>
+				</div>
+				<div class="error" id="errorPayment">
+					<p>Ежемесячный платеж указан некоректно</p>
+				</div>
+				<div>
+					<div class="forFloat"><input type="button" id="calculateButton" class="btn btn-primary" value="Вычислить"/></div>
+					<div class="forFloat"><input type="text" class="form-control" name="result" id="result"/></div>
+				</div>
+				<div class="forFloat">
+					<input type="button" value="График платежей" id="buttonTable" class="btn btn-success" />
+				</div>
+				<div></div>
 			</div>
 		</form>
+		<footer>
+			<h5>Пример ипотечного калькулятора для различных типов расчета<h5>
+		</footer>
 	</body>
 </html>
